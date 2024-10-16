@@ -2,6 +2,8 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import '../app/globals.css'; 
+import { ThemeProvider } from '@/components/ThemeProvider';
+import Header1 from "../components/Header1"
 
 export const metadata = {
   title: "D'econtrakan",
@@ -16,11 +18,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Header /> {/* Include Header component */}
-        
-        <main>{children}</main>
-
-        <Footer /> {/* Include Footer component */}
+        <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+          <Header1 />
+          <main>{children}</main>
+          <Footer /> 
+        </ThemeProvider>
       </body>
     </html>
   );
