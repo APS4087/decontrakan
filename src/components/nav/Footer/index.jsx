@@ -6,21 +6,12 @@ export default function Footer() {
     return (
         <div className={styles.footer}>
             <ul>
-                <motion.li 
+                <motion.li
                     custom={[0.3, 0]} 
                     variants={translate} initial="initial" 
                     animate="enter" 
                     exit="exit">
-                    <span>Made by:</span>Studio Lumio
-                </motion.li>
-            </ul>
-            <ul>
-                <motion.li  
-                    custom={[0.3, 0]} 
-                    variants={translate} initial="initial" 
-                    animate="enter" 
-                    exit="exit">
-                    <span>Typography:</span> Google Fonts
+                    <span>Language:</span> English
                 </motion.li>
             </ul>
             <ul>
@@ -29,7 +20,7 @@ export default function Footer() {
                     variants={translate} initial="initial" 
                     animate="enter" 
                     exit="exit">
-                    <span>Images:</span> Freepik, Envato
+                    <span>Theme:</span> Light
                 </motion.li>
             </ul>
             <ul>

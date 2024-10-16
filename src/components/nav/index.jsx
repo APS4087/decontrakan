@@ -25,11 +25,6 @@ const links = [
     src: "/images/bandstand.png"
   },
   {
-    title: "Lookbook",
-    href: "/lookbook",
-    src: "/images/bandstand.png"
-  },
-  {
     title: "Contact",
     href: "/contact",
     src: "/images/bandstand.png"
