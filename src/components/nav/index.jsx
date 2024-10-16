@@ -6,32 +6,33 @@ import { height } from '../animate';
 import Body from './Body';
 import Footer from './Footer';
 import Image from './Image';
+import data from '@/utils/data';
 
 const links = [
   {
     title: "Home",
     href: "/",
-    src: "home.png"
+    src: data.testImage
   },
   {
-    title: "Shop",
-    href: "/shop",
-    src: "shop.png"
+    title: "Properties",
+    href: "/properties",
+    src: "/images/bandstand.png"
   },
   {
     title: "About Us",
     href: "/about",
-    src: "home.png"
+    src: "/images/bandstand.png"
   },
   {
     title: "Lookbook",
     href: "/lookbook",
-    src: "lookbook.png"
+    src: "/images/bandstand.png"
   },
   {
     title: "Contact",
     href: "/contact",
-    src: "contact.png"
+    src: "/images/bandstand.png"
   }
 ]
 

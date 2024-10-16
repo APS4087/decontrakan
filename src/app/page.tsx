@@ -35,7 +35,7 @@ export default function Home() {
   return (
     <section>
       {/* Hero Section */}
-      <div className="pt-20"> {/* Adjusting to add space */}
+      <div className="relative pt-20"> {/* Adjusting to add space */}
         <Image src="/images/bandstand.png" alt="Hero" width={1200} height={600} />
         <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center text-white">
           <h1 className="text-4xl font-bold">Find a comfort zone to live.</h1>
