@@ -1,0 +1,124 @@
+/* Kontainer Utama */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    height: 100vh;
+    background-color: #f8f8f8;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Bagian Kiri - BOOK EXPERIENCE */
+  .left-section {
+    background-color: #f2f2f2;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .sticky-header {
+    position: sticky;
+    top: 20rem;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: left;
+  }
+  
+  .sticky-header h1 {
+    font-size: 64px;
+    font-weight: bold;
+  }
+  
+  /* Bagian Kanan - Formulir */
+  .right-section {
+    background-color: #ffffff;
+    padding: 40px;
+  }
+  
+  h2 {
+    font-size: 34px;
+    font-weight: bold;
+    margin-top: 60px;
+  }
+  
+  p {
+    font-size: 18px;
+    color: #555555;
+    margin-bottom: 20px;
+  }
+  
+  /* Formulir */
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .form-row {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  input, textarea, select {
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  textarea {
+    resize: none;
+  }
+  
+  .consultation-options {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .consultation-options button {
+    padding: 10px 20px;
+    border: 1px solid #cccccc;
+    background-color: white;
+    cursor: pointer;
+  }
+  
+  .consultation-options button:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* Tombol Submit */
+  .submit-button {
+    padding: 15px;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .submit-button:hover {
+    background-color: #333333;
+  }
+  
+  /* Checkbox dan Label */
+  input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  label a {
+    color: #333333;
+    text-decoration: underline;
+  }
+  

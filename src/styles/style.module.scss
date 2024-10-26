@@ -1,13 +1,12 @@
-.header{
-    background-color: #ffffff;
+.header {
+    background-color: #eeeeee;
     position: fixed;
     width: 100%;
     box-sizing: border-box;
-    padding: 10px;
-    z-index: 10; /* Ensure header stays above other elements */
-    //height: 60px; /* Optional: set a fixed height if desired */
+    padding: 5px 15px; /* Kurangi padding untuk navbar yang lebih kecil */
+    z-index: 10;
 
-    .background{
+    .background {
         background-color: black;
         opacity: 0.5;
         height: 100%;
@@ -17,51 +16,53 @@
         top: 100%;
     }
 
-    .bar{
+    .bar {
         display: flex;
-        justify-content: right;
+        justify-content: space-between;
+        align-items: center;
         text-transform: uppercase;
-        font-size: 12px;
+        font-size: 10px; /* Perkecil font-size */
         font-weight: 400;
-        position: relative;
 
-        p{
+        p {
             margin: 0px;
         }
 
-        a{
+        a {
             text-decoration: none;
             color: black;
-            position: absolute;
-            left: 0;
+            position: relative;
+            font-size: 18px; /* Kurangi ukuran font untuk logo */
+            font-weight: bold;
         }
 
-        .el{
+        .el {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
+            gap: 6px; /* Kurangi jarak */
             cursor: pointer;
 
-            .label{
+            .label {
                 position: relative;
                 display: flex;
                 align-items: center;
             }
 
-            p{
-                &:nth-of-type(2){
+            p {
+                &:nth-of-type(2) {
                     position: absolute;
                     opacity: 0;
                 }
             }
 
-            .burger{
-                width: 22.5px;
+            .burger {
+                width: 18px; /* Perkecil ukuran burger menu */
                 position: relative;
                 pointer-events: none;
-    
-                &::after, &::before{
+
+                &::after,
+                &::before {
                     content: "";
                     height: 1px;
                     width: 100%;
@@ -70,44 +71,111 @@
                     display: block;
                     transition: all 1s cubic-bezier(0.76, 0, 0.24, 1);
                 }
-    
-                &::after{
-                    top: -4px;
+
+                &::after {
+                    top: -3px; /* Sesuaikan jarak antara garis burger */
                 }
-    
-                &::before{
-                    top: 4px;
-                }
-            }
-    
-            .burgerActive{
-                
-                &::after{
-                    transform: rotate(45deg);
-                    top: -1px;
-                }
-    
-                &::before{
-                    transform: rotate(-45deg);
-                    top: 1px;
+
+                &::before {
+                    top: 3px;
                 }
             }
         }
     }
-}
 
-
-@media only screen and (min-width: 600px) {
-    .header{
-        padding: 20px;
-
-        .bar{
-            font-size: 15px;
+    .burgerActive {
+        &::after {
+            transform: rotate(45deg);
+            top: 0px; /* Perbaiki posisi setelah aktif */
         }
 
-        .shop{
-            display: block;
-            cursor: pointer;
+        &::before {
+            transform: rotate(-45deg);
+            top: 0px;
+        }
+    }
+
+    .leftSection {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding-left: 15px; /* Kurangi padding kiri */
+
+        a {
+            font-family: 'Helvetica, Arial, sans-serif';
+            font-size: 18px; /* Sesuaikan ukuran font logo */
+            margin-bottom: 2px; /* Kurangi jarak bawah */
+            font-weight: bold;
+        }
+    }
+
+    .locationInfo {
+        font-family: 'Helvetica, Arial, sans-serif';
+        font-size: 10px; /* Perkecil font-size */
+        color: #000;
+
+        p {
+            margin: 0;
+            line-height: 1.3; /* Sesuaikan line-height */
+            font-weight: normal;
+            display: flex;
+            align-items: center;
+
+            &::before {
+                content: "•";
+                margin-right: 5px;
+                font-size: 12px; /* Sesuaikan ukuran bullet */
+                color: #000;
+            }
+        }
+    }
+
+    .soundButton {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        p {
+            margin-left: 8px; /* Kurangi jarak kiri */
+            font-size: 10px; /* Perkecil ukuran teks */
+            font-weight: bold;
+        }
+    }
+
+    .soundWaves {
+        display: flex;
+        align-items: center;
+        width: 15px; /* Perkecil lebar */
+        height: 15px; /* Perkecil tinggi */
+
+        div {
+            width: 2px; /* Perkecil lebar bar gelombang */
+            height: 12px; /* Perkecil tinggi bar gelombang */
+            margin: 0 1px; /* Kurangi margin */
+            background-color: black;
+            animation: wave 1s infinite;
+
+            &:nth-child(2) {
+                animation-delay: -0.3s;
+            }
+
+            &:nth-child(3) {
+                animation-delay: -0.6s;
+            }
+        }
+
+        &.paused div {
+            animation-play-state: paused;
+        }
+    }
+
+    @keyframes wave {
+        0%, 100% {
+            transform: scaleY(1);
+        }
+        50% {
+            transform: scaleY(2);
         }
     }
 }
