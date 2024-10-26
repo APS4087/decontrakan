@@ -1,9 +1,9 @@
 .header {
-    background-color: #eeeeee;
+    background-color: #ffffff;
     position: fixed;
     width: 100%;
     box-sizing: border-box;
-    padding: 5px 15px; /* Kurangi padding untuk navbar yang lebih kecil */
+    padding: 5px 20px; 
     z-index: 10;
 
     .background {
@@ -21,8 +21,9 @@
         justify-content: space-between;
         align-items: center;
         text-transform: uppercase;
-        font-size: 10px; /* Perkecil font-size */
+        font-size: 12px; 
         font-weight: 400;
+        position: relative;
 
         p {
             margin: 0px;
@@ -32,7 +33,7 @@
             text-decoration: none;
             color: black;
             position: relative;
-            font-size: 18px; /* Kurangi ukuran font untuk logo */
+            font-size: 18px; 
             font-weight: bold;
         }
 
@@ -40,7 +41,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 6px; /* Kurangi jarak */
+            gap: 6px; 
             cursor: pointer;
 
             .label {
@@ -57,41 +58,41 @@
             }
 
             .burger {
-                width: 18px; /* Perkecil ukuran burger menu */
+                width: 22.5px;
                 position: relative;
                 pointer-events: none;
 
-                &::after,
-                &::before {
+                &::after, &::before {
                     content: "";
                     height: 1px;
                     width: 100%;
                     background-color: black;
-                    position: relative;
+                    position: absolute;
                     display: block;
                     transition: all 1s cubic-bezier(0.76, 0, 0.24, 1);
+                    transform-origin: center;
                 }
 
                 &::after {
-                    top: -3px; /* Sesuaikan jarak antara garis burger */
+                    top: -4px;
                 }
 
                 &::before {
-                    top: 3px;
+                    top: 4px;
                 }
             }
-        }
-    }
 
-    .burgerActive {
-        &::after {
-            transform: rotate(45deg);
-            top: 0px; /* Perbaiki posisi setelah aktif */
-        }
+            .burgerActive {
+                &::after {
+                    transform: rotate(45deg);
+                    top: 0px;
+                }
 
-        &::before {
-            transform: rotate(-45deg);
-            top: 0px;
+                &::before {
+                    transform: rotate(-45deg);
+                    top: 0px;
+                }
+            }
         }
     }
 
@@ -100,24 +101,24 @@
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
-        padding-left: 15px; /* Kurangi padding kiri */
+        padding-left: 15px; 
 
         a {
             font-family: 'Helvetica, Arial, sans-serif';
-            font-size: 18px; /* Sesuaikan ukuran font logo */
-            margin-bottom: 2px; /* Kurangi jarak bawah */
+            font-size: 18px; 
+            margin-bottom: 2px; 
             font-weight: bold;
         }
     }
 
     .locationInfo {
         font-family: 'Helvetica, Arial, sans-serif';
-        font-size: 10px; /* Perkecil font-size */
+        font-size: 10px; 
         color: #000;
 
         p {
             margin: 0;
-            line-height: 1.3; /* Sesuaikan line-height */
+            line-height: 1.3; 
             font-weight: normal;
             display: flex;
             align-items: center;
@@ -125,7 +126,7 @@
             &::before {
                 content: "•";
                 margin-right: 5px;
-                font-size: 12px; /* Sesuaikan ukuran bullet */
+                font-size: 12px; 
                 color: #000;
             }
         }
@@ -133,12 +134,13 @@
 
     .soundButton {
         display: flex;
-        align-items: center;
+        align-items: start;
         cursor: pointer;
+        margin-left: -40px;
 
         p {
-            margin-left: 8px; /* Kurangi jarak kiri */
-            font-size: 10px; /* Perkecil ukuran teks */
+            margin-left: 5px; 
+            font-size: 10px; 
             font-weight: bold;
         }
     }
@@ -146,13 +148,13 @@
     .soundWaves {
         display: flex;
         align-items: center;
-        width: 15px; /* Perkecil lebar */
-        height: 15px; /* Perkecil tinggi */
+        width: 15px;
+        height: 15px;
 
         div {
-            width: 2px; /* Perkecil lebar bar gelombang */
-            height: 12px; /* Perkecil tinggi bar gelombang */
-            margin: 0 1px; /* Kurangi margin */
+            width: 2px; 
+            height: 12px; 
+            margin: 0 1px; 
             background-color: black;
             animation: wave 1s infinite;
 
