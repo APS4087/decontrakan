@@ -8,10 +8,11 @@ import Link from 'next/link';
 const Header = () => {
   return (
     <header className='p-4 flex items-center justify-between relative'>
-      {/* Logo / Title */}
+      {/*logo */}
       <aside className='flex items-center gap-2'>
-        <span className='text-xl font-bold'>D'econtrakan</span>
+        <img src="/dcontrakan.jpg" alt="D'econtrakan Logo" className="logo" />
       </aside>
+
 
       {/* Navigation Menu */}
       <nav className="hidden md:block absolute left-[50%] top-[50%] transform translate-x-[-50%] translate-y-[-50%]">
